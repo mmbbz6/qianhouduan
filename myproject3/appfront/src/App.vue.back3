@@ -1,0 +1,162 @@
+<template>
+  <div>
+    <ul>
+      <li v-for="(item, index) in links"><a @click="$goRoute(item.route, item.text);toggle(index);scrollToFoods(index)"
+      :class="{'active':index ==checkindex }">{{item.text}}</a></li>
+    </ul>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'app',
+    data () {
+      return {
+        links: [
+          {
+            text: '内存型',
+            route: '/page01'
+          },
+          {
+            text: '密集计算型',
+            route: '/page02'
+          },
+          {
+            text: '计算型',
+            route: '/page03'
+          },
+          {
+            text: '通用型',
+            route: '/page04'
+          },
+          {
+            text: '高主频型',
+            route: '/page05'
+          },
+          {
+            text: '本地SSD型',
+            route: '/page06'
+          },
+          {
+            text: '大数据型',
+            route: '/page07'
+          },
+          {
+            text: 'GPU计算型',
+            route: '/page08'
+          },
+          {
+            text: 'GPU可视化计算型',
+            route: '/page09'
+          },
+          {
+            text: 'FPGA计算型',
+            route: '/page10'
+          },
+          {
+            text: '高主频计算型',
+            route: '/page11'
+          },
+          {
+            text: '通用网络增强型',
+            route: '/page12'
+          },
+          {
+            text: '计算网络增强型',
+            route: '/page13'
+          }
+
+        ],
+        checkindex: 0
+      }
+    },
+
+   methods: {
+ 
+    toggle (index) {
+        this.checkindex = index
+      }
+    
+
+     }
+  }
+</script>
+
+
+<style>
+  .active {
+    background: #138bec;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .spacing {
+    margin-top: 30px;
+  }
+  .red {
+    color: darkred;
+  }
+  ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  ul li a{
+    display: inherit;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+  ul li a:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #138bec;
+    border: 1px solid #138bec;
+  }
+</style>
+
+/*
+/*导航普通状态*/
+.item-cn {
+  color: #1c2438;
+  font-weight: 800;
+}
+
+/*导航普通状态*/
+.item-en {
+  color: #666;
+  font-size: 12px;
+}
+
+/*导航高亮*/
+.item-cn-active {
+  color: #2d8cf0;
+}
+
+/*导航高亮*/
+.item-en-active {
+  color: #5cadff;
+}
+
+.links-item:hover .item-cn {
+  color: #2d8cf0;
+}
+
+.links-item:hover .item-en {
+  color: #5cadff;
+}
+
+.links-item:after {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  content: '';
+  width: 1px;
+  height: 16px;
+  background-color: #f8f8f8;
+}
+
+.links-item:after:last-child {
+  width: 0;
+}
+
+*/

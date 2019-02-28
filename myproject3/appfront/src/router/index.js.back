@@ -1,0 +1,51 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '@/components/Home'
+
+ 
+import ecs1 from '@/components/ecs1' 
+import ecs2 from '@/components/ecs2' 
+import ecs3 from '@/components/ecs3'
+import ecs4 from '@/components/ecs4'
+import ecs5 from '@/components/ecs5'
+
+/*
+let router = [
+   {
+      path: '/',
+      name: '服务器',
+      component: Home,
+      redirect: '/ecs1',
+          iconCls: 'fa fa-id-card-o',
+    // 左侧边列表内容，可在此添加不同类的产品
+          children: [
+                { path: '/ecs1', component: ecs1, name: '通用型' },
+                { path: '/ecs2', component: ecs2, name: '密集计算型' },
+        { path: '/ecs3', component: ecs3, name: '计算型' },
+        { path: '/ecs4', component: ecs4, name: '内存型' },
+        { path: '/ecs5', component: ecs5, name: '内存增强型' }
+      ] 
+    }
+]; 
+export default router; 
+*/
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+      redirect: '/ecs1',
+      children: [
+                { path: '/ecs1', component: ecs1, name: '通用型' },
+                { path: '/ecs2', component: ecs2, name: '密集计算型' },
+        { path: '/ecs3', component: ecs3, name: '计算型' },
+        { path: '/ecs4', component: ecs4, name: '内存型' },
+        { path: '/ecs5', component: ecs5, name: '内存增强型' }
+      ]
+    }
+  ]
+})

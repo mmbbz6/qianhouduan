@@ -1,0 +1,480 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import home from '@/components/home'
+import page01 from '@/components/page01'
+import page02 from '@/components/page02'
+import page03 from '@/components/page03'
+import page04 from '@/components/page04'
+import page05 from '@/components/page05'
+import page06 from '@/components/page06'
+import page07 from '@/components/page07'
+import page08 from '@/components/page08'
+import page09 from '@/components/page09'
+import page10 from '@/components/page10'
+import page11 from '@/components/page11'
+import page12 from '@/components/page12'
+import page13 from '@/components/page13'
+import page01A from '@/components/page01/page01-A'
+import page01B from '@/components/page01/page01-B'
+import pageEnd from '@/components/page01/B/end'
+import page01C from '@/components/page01/page01-C'
+import page01D from '@/components/page01/page01-D'
+import page02A from '@/components/page02/page02-A'
+import page02B from '@/components/page02/page02-B'
+import page02End from '@/components/page02/B/end'
+import page02C from '@/components/page02/page02-C'
+import page02D from '@/components/page02/page02-D'
+import page02E from '@/components/page02/page02-E'
+import page02F from '@/components/page02/page02-F'
+import page03A from '@/components/page03/page03-A'
+import page03B from '@/components/page03/page03-B'
+import page03End from '@/components/page03/B/end'
+import page04A from '@/components/page04/page04-A'
+import page04B from '@/components/page04/page04-B'
+import page04End from '@/components/page04/B/end'
+import page05A from '@/components/page05/page05-A'
+import page05B from '@/components/page05/page05-B'
+import page05End from '@/components/page05/B/end'
+import page06A from '@/components/page06/page06-A'
+import page06B from '@/components/page06/page06-B'
+import page06End from '@/components/page06/B/end'
+import page07A from '@/components/page07/page07-A'
+import page07B from '@/components/page07/page07-B'
+import page07End from '@/components/page07/B/end'
+import page08A from '@/components/page08/page08-A'
+import page08B from '@/components/page08/page08-B'
+import page08End from '@/components/page08/B/end'
+import page09A from '@/components/page09/page09-A'
+import page09B from '@/components/page09/page09-B'
+import page09End from '@/components/page09/B/end'
+import page10A from '@/components/page10/page10-A'
+import page10B from '@/components/page10/page10-B'
+import page10End from '@/components/page10/B/end'
+import page11A from '@/components/page11/page11-A'
+import page11B from '@/components/page11/page11-B'
+import page11End from '@/components/page11/B/end'
+import page12A from '@/components/page12/page12-A'
+import page12B from '@/components/page12/page12-B'
+import page12End from '@/components/page12/B/end'
+import page13A from '@/components/page13/page13-A'
+import page13B from '@/components/page13/page13-B'
+import page13End from '@/components/page13/B/end'
+
+Vue.use(Router)
+
+export default new Router({
+//  mode: 'history',
+  routes: [
+     {
+      path: '/',
+      name: 'home',
+      component: home
+    }, 
+   {
+      path: '/home',
+      name: 'home',
+      component: home
+    },
+    {
+      path: '/page01',
+      name: 'page01',
+      component: page01,
+      children: [
+        {
+          path: 'page01-a',
+          name: 'page01A',
+          component: page01A
+        },
+        {
+          path: 'page01-b',
+          name: 'page01B',
+          component: page01B,
+          children: [
+            {
+              path: 'end',
+              name: 'pageEnd',
+              component: pageEnd
+            }
+          ]
+        },
+        {
+         path: 'page01-c',
+          name: 'page01C',
+          component: page01C,
+          children: [
+            {
+              path: 'end',
+              name: 'pageEnd',
+              component: pageEnd
+            }
+          ]
+        },
+        {
+          path: 'page01-d',
+          name: 'page01D',
+          component: page01D,
+          children: [
+            {
+              path: 'end',
+              name: 'pageEnd',
+              component: pageEnd
+            }
+          ]
+        }
+      ]
+    },
+    {
+      path: '/page02',
+      name: 'page02',
+      component: page02,
+      children: [
+        {
+          path: 'page02-A',
+          name: 'page02A',
+          component: page02A
+        },
+        {
+          path: 'page02-B',
+          name: 'page02B',
+          component: page02B,
+          children: [
+            {
+              path: 'end',
+              name: 'page02End',
+              component: page02End
+            }
+          ]
+        },
+
+        {
+          path: 'page02-C',
+          name: 'page02C',
+          component: page02C,
+          children: [
+            {
+              path: 'end',
+              name: 'page02End',
+              component: page02End
+            }
+          ]
+        },
+
+
+        {
+          path: 'page02-D',
+          name: 'page02D',
+          component: page02D,
+          children: [
+            {
+              path: 'end',
+              name: 'page02End',
+              component: page02End
+            }
+          ]
+        },
+
+        {
+          path: 'page02-E',
+          name: 'page02E',
+          component: page02E,
+          children: [
+            {
+              path: 'end',
+              name: 'page02End',
+              component: page02End
+            }
+          ]
+        },
+  
+        {
+          path: 'page02-F',
+          name: 'page02F',
+          component: page02F,
+          children: [
+            {
+              path: 'end',
+              name: 'page02End',
+              component: page02End
+            }
+          ]
+        }
+      ]
+    },
+
+     {
+      path: '/page03',
+      name: 'page03',
+      component: page03,
+      children: [
+        {
+          path: 'page03-A',
+          name: 'page03A',
+          component: page03A
+        },
+        {
+          path: 'page03-B',
+          name: 'page03B',
+          component: page03B,
+          children: [
+            {
+              path: 'end',
+              name: 'page03End',
+              component: page03End
+            }
+          ]
+        }
+      ]
+    },
+
+   {
+      path: '/page04',
+      name: 'page04',
+      component: page04,
+      children: [
+        {
+          path: 'page04-A',
+          name: 'page04A',
+          component: page04A
+        },
+        {
+          path: 'page04-B',
+          name: 'page04B',
+          component: page04B,
+          children: [
+            {
+              path: 'end',
+              name: 'page04End',
+              component: page04End
+            }
+          ]
+        }
+      ]
+    },
+
+   {
+      path: '/page05',
+      name: 'page05',
+      component: page05,
+      children: [
+        {
+          path: 'page05-A',
+          name: 'page05A',
+          component: page05A
+        },
+        {
+          path: 'page05-B',
+          name: 'page05B',
+          component: page05B,
+          children: [
+            {
+              path: 'end',
+              name: 'page05End',
+              component: page05End
+            }
+          ]
+        }
+      ]
+    },
+
+   {
+      path: '/page06',
+      name: 'page06',
+      component: page06,
+      children: [
+        {
+          path: 'page06-A',
+          name: 'page06A',
+          component: page06A
+        },
+        {
+          path: 'page06-B',
+          name: 'page06B',
+          component: page06B,
+          children: [
+            {
+              path: 'end',
+              name: 'page06End',
+              component: page06End
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      path: '/page07',
+      name: 'page07',
+      component: page07,
+      children: [
+        {
+          path: 'page07-A',
+          name: 'page07A',
+          component: page07A
+        },
+        {
+          path: 'page07-B',
+          name: 'page07B',
+          component: page07B,
+          children: [
+            {
+              path: 'end',
+              name: 'page07End',
+              component: page07End
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      path: '/page08',
+      name: 'page08',
+      component: page08,
+      children: [
+        {
+          path: 'page08-A',
+          name: 'page08A',
+          component: page08A
+        },
+        {
+          path: 'page08-B',
+          name: 'page08B',
+          component: page08B,
+          children: [
+            {
+              path: 'end',
+              name: 'page08End',
+              component: page08End
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      path: '/page09',
+      name: 'page09',
+      component: page09,
+      children: [
+        {
+          path: 'page09-A',
+          name: 'page09A',
+          component: page09A
+        },
+        {
+          path: 'page09-B',
+          name: 'page09B',
+          component: page09B,
+          children: [
+            {
+              path: 'end',
+              name: 'page09End',
+              component: page09End
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      path: '/page10',
+      name: 'page10',
+      component: page10,
+      children: [
+        {
+          path: 'page10-A',
+          name: 'page10A',
+          component: page10A
+        },
+        {
+          path: 'page10-B',
+          name: 'page10B',
+          component: page10B,
+          children: [
+            {
+              path: 'end',
+              name: 'page10End',
+              component: page10End
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      path: '/page11',
+      name: 'page11',
+      component: page11,
+      children: [
+        {
+          path: 'page11-A',
+          name: 'page11A',
+          component: page11A
+        },
+        {
+          path: 'page11-B',
+          name: 'page11B',
+          component: page11B,
+          children: [
+            {
+              path: 'end',
+              name: 'page11End',
+              component: page11End
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      path: '/page12',
+      name: 'page12',
+      component: page12,
+      children: [
+        {
+          path: 'page12-A',
+          name: 'page12A',
+          component: page12A
+        },
+        {
+          path: 'page12-B',
+          name: 'page12B',
+          component: page12B,
+          children: [
+            {
+              path: 'end',
+              name: 'page12End',
+              component: page12End
+            }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      path: '/page13',
+      name: 'page13',
+      component: page13,
+      children: [
+        {
+          path: 'page13-A',
+          name: 'page13A',
+          component: page13A
+        },
+        {
+          path: 'page13-B',
+          name: 'page13B',
+          component: page13B,
+          children: [
+            {
+              path: 'end',
+              name: 'page13End',
+              component: page13End
+            }
+          ]
+        }
+      ]
+    },
+  ]
+})

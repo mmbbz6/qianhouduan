@@ -1,0 +1,94 @@
+<template>
+  <div>
+    <ul>
+      <li v-for="item in links"><a @click="$goRoute(item.route, item.text)">{{item.text}}</a></li>
+    </ul>
+    <router-view v-if="isRouterAlive"></router-view>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'app',
+    data () {
+      return {
+        links: [
+          {
+            text: '内存型',
+            route: '/page01'
+          },
+          {
+            text: '计算型',
+            route: '/page02'
+          },
+          {
+            text: '通用型',
+            route: '/page04'
+          },
+          {
+            text: '高主频型',
+            route: '/page05'
+          },
+          {
+            text: '本地SSD型',
+            route: '/page06'
+          },
+          {
+            text: '大数据型',
+            route: '/page07'
+          },
+        
+          {
+            text: '高主频计算型',
+            route: '/page11'
+          },
+          {
+            text: '通用网络增强型',
+            route: '/page12'
+          },
+          {
+            text: '计算网络增强型',
+            route: '/page13'
+          }
+        ],
+        isRouterAlive: true
+      }
+    },
+    
+   methods: {
+   reload () {
+     this.isRouterAlive = false
+     this.$nextTick(() => (this.isRouterAlive = true))
+   }   
+ }
+
+  }
+</script>
+
+
+<style>
+  .text-center {
+    text-align: center;
+  }
+  .spacing {
+    margin-top: 30px;
+  }
+  .red {
+    color: darkred;
+  }
+  ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  ul li a{
+    display: inherit;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+  ul li a:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #138bec;
+    border: 1px solid #138bec;
+  }
+</style>
