@@ -5,7 +5,7 @@ from django.core import serializers
 import requests
 import json
 
-from models import Aliyun
+from myapp.models import Aliyun
 
 # Create your views here.
 @require_http_methods(["GET"])
